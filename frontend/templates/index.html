@@ -1,134 +1,292 @@
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8"><title>Urganch RTT | Kelajak Akademiyasi</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/" class="logo">URTT.</a>
-        <div class="nav-links">
-            <a href="/about">Texnikum</a>
-            <a href="/courses">Yo'nalishlar</a>
-            <a href="/admission">Qabul 2026</a>
-            <a href="/contact">Aloqa</a>
-            <a href="/login" class="btn-outline" style="padding: 8px 15px;">KABINET</a>
+{% extends "base.html" %}
+{% block title %}URTT — IT sohasida kelajagingizni quring{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════════════════════════════════════════ -->
+<section class="hero-section">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="container position-relative">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-7 hero-left">
+        <div class="hero-badge mb-4">
+          <i class="bi bi-star-fill me-2"></i>
+          O'zbekistoning yetakchi IT texnikumi — Xorazm viloyati
         </div>
-    </nav>
-
-    <header class="hero">
-        <h2>Urganch Raqamli Texnologiyalar Texnikumiga xush kelibsiz</h2>
-        <h1>Biz bilan raqamli <br><span style="color:var(--accent)">olamni zabt eting.</span></h1>
-        <p>Sobiq Urganch axborot texnologiyalari texnikumi bazasida tashkil etilgan, Xorazmning eng zamonaviy IT-markazi. Biz faqat nazariya emas, balki real loyihalarni o'rgatamiz.</p>
-        <a href="/admission" class="btn-outline">O'qishga topshirish</a>
-    </header>
-
-    <section class="section">
-        <h2 class="section-h">Nima uchun aynan URTT?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Davlat Diplomi</h3>
-                <p>Oliy ta'lim, fan va innovatsiyalar vazirligi tomonidan tasdiqlangan rasmiy davlat hujjati.</p>
-            </div>
-            <div class="card">
-                <h3>2 Yillik Intensiv</h3>
-                <p>Qisqa vaqt ichida mehnat bozorida eng talabgir kadrga aylanish imkoniyati.</p>
-            </div>
-            <div class="card">
-                <h3>Dual Ta'lim</h3>
-                <p>O'qishning yarmi texnikumda, yarmi esa IT korxonalarda amaliyot shaklida o'tadi.</p>
-            </div>
+        <h1 class="hero-title">
+          Raqamli Kelajak<br/>
+          <span class="hero-title-accent">Shu Yerda Boshlanadi</span>
+        </h1>
+        <p class="hero-desc">
+          Urganch Raqamli Texnologiyalar Texnikumida zamonaviy IT mutaxassisliklari bo'yicha ta'lim oling.
+          Sanoat ekspertlaridan o'rganing, real loyihalarda ishtirok eting va karera yo'lingizni bugundan boshlang.
+        </p>
+        <div class="hero-actions">
+          <a href="{{ url_for('admission') }}" class="btn btn-hero-primary">
+            <i class="bi bi-rocket-takeoff me-2"></i>Qabul hujjatlari
+          </a>
+          <a href="{{ url_for('courses') }}" class="btn btn-hero-secondary">
+            <i class="bi bi-play-circle me-2"></i>Yo'nalishlarni ko'rish
+          </a>
         </div>
-    </section>
-
-    <section class="section" style="background: #112240;">
-        <h2 class="section-h">Statistika va Imkoniyatlar</h2>
-        <div class="grid">
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">500+</h1>
-                <p>Yillik bitiruvchilar</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">15+</h1>
-                <p>IT Laboratoriyalar</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">90%</h1>
-                <p>Ish bilan ta'minlanish</p>
-            </div>
+        <div class="hero-trust mt-5">
+          <span class="trust-item"><i class="bi bi-patch-check-fill text-success me-1"></i>Davlat sertifikatli</span>
+          <span class="trust-item"><i class="bi bi-briefcase-fill text-warning me-1"></i>Ish joyi kafolati</span>
+          <span class="trust-item"><i class="bi bi-translate text-info me-1"></i>O'zbek tilida ta'lim</span>
         </div>
-    </section>
-
-    <footer>
-        <p>Urganch shahri, Tinchlik ko'chasi, 6-uy. Tel: +998 (93) 923-01-45</p>
-        <p style="margin-top: 10px; opacity: 0.5;">&copy; 2026 Barcha huquqlar himoyalangan.</p>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8"><title>Urganch RTT | Kelajak Akademiyasi</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/" class="logo">URTT.</a>
-        <div class="nav-links">
-            <a href="/about">Texnikum</a>
-            <a href="/courses">Yo'nalishlar</a>
-            <a href="/admission">Qabul 2026</a>
-            <a href="/contact">Aloqa</a>
-            <a href="/login" class="btn-outline" style="padding: 8px 15px;">KABINET</a>
+      </div>
+      <div class="col-lg-5 hero-right d-none d-lg-flex justify-content-end">
+        <div class="hero-visual">
+          <div class="hero-card hero-card-main">
+            <div class="hc-header">
+              <div class="hc-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="hc-title">urtt_app.py</span>
+            </div>
+            <div class="hc-code">
+              <p><span class="c-kw">def</span> <span class="c-fn">build_future</span>(student):</p>
+              <p class="ps-3"><span class="c-kw">if</span> student.is_motivated:</p>
+              <p class="ps-5"><span class="c-kw">return</span> <span class="c-str">"success"</span></p>
+              <p class="ps-3"><span class="c-cm"># URTT provides the rest</span></p>
+              <p class="ps-3"><span class="c-kw">return</span> <span class="c-str">"still_success"</span></p>
+              <br/>
+              <p><span class="c-cm"># 3400+ mezunlar ishlaydi!</span></p>
+              <p><span class="c-fn">build_future</span>(you) <span class="c-cm">← siz</span></p>
+            </div>
+          </div>
+          <div class="hero-card hero-card-stat">
+            <i class="bi bi-people-fill text-primary"></i>
+            <div>
+              <strong>{{ stats.students }}+</strong>
+              <small>Faol talabalar</small>
+            </div>
+          </div>
+          <div class="hero-card hero-card-stat hero-card-stat-2">
+            <i class="bi bi-award-fill text-warning"></i>
+            <div>
+              <strong>{{ stats.graduates }}+</strong>
+              <small>Muvaffaqiyatli mezunlar</small>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
 
-    <header class="hero">
-        <h2>Urganch Raqamli Texnologiyalar Texnikumiga xush kelibsiz</h2>
-        <h1>Biz bilan raqamli <br><span style="color:var(--accent)">olamni zabt eting.</span></h1>
-        <p>Sobiq Urganch axborot texnologiyalari texnikumi bazasida tashkil etilgan, Xorazmning eng zamonaviy IT-markazi. Biz faqat nazariya emas, balki real loyihalarni o'rgatamiz.</p>
-        <a href="/admission" class="btn-outline">O'qishga topshirish</a>
-    </header>
+  <!-- Scroll indicator -->
+  <div class="hero-scroll-indicator">
+    <span>Pastga</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <section class="section">
-        <h2 class="section-h">Nima uchun aynan URTT?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Davlat Diplomi</h3>
-                <p>Oliy ta'lim, fan va innovatsiyalar vazirligi tomonidan tasdiqlangan rasmiy davlat hujjati.</p>
+<!-- ═══════════════ STATS ══════════════════════════════════════════════════ -->
+<section class="stats-section py-5">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+        <div class="stat-number" data-target="{{ stats.students }}">0</div>
+        <div class="stat-label">Faol talabalar</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-person-workspace"></i></div>
+        <div class="stat-number" data-target="{{ stats.teachers }}">0</div>
+        <div class="stat-label">Malakali o'qituvchilar</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-journal-code"></i></div>
+        <div class="stat-number" data-target="{{ stats.courses }}">0</div>
+        <div class="stat-label">Ta'lim yo'nalishlari</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="bi bi-mortarboard-fill"></i></div>
+        <div class="stat-number" data-target="{{ stats.graduates }}">0</div>
+        <div class="stat-label">Muvaffaqiyatli mezunlar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURED COURSES ══════════════════════════════════════ -->
+<section class="py-6 featured-section">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Ta'lim yo'nalishlari</span>
+      <h2 class="section-title">Eng Mashhur Yo'nalishlar</h2>
+      <p class="section-desc">Sanoatning eng talabgor mutaxassisliklarida professional ta'lim oling</p>
+    </div>
+    <div class="row g-4">
+      {% for course in featured %}
+      <div class="col-lg-4 col-md-6">
+        <div class="course-card course-card-{{ course.color }}">
+          <div class="cc-header">
+            <div class="cc-icon"><i class="bi {{ course.icon }}"></i></div>
+            <div class="cc-badge">{{ course.duration }}</div>
+          </div>
+          <h3 class="cc-title">{{ course.title }}</h3>
+          <p class="cc-desc">{{ course.short }}</p>
+          <ul class="cc-topics">
+            {% for topic in course.topics[:3] %}
+            <li><i class="bi bi-check2 me-2"></i>{{ topic }}</li>
+            {% endfor %}
+          </ul>
+          <div class="cc-footer">
+            <div class="cc-seats">
+              <i class="bi bi-people me-1"></i>{{ course.seats }} o'rin
             </div>
-            <div class="card">
-                <h3>2 Yillik Intensiv</h3>
-                <p>Qisqa vaqt ichida mehnat bozorida eng talabgir kadrga aylanish imkoniyati.</p>
-            </div>
-            <div class="card">
-                <h3>Dual Ta'lim</h3>
-                <p>O'qishning yarmi texnikumda, yarmi esa IT korxonalarda amaliyot shaklida o'tadi.</p>
-            </div>
+            <a href="{{ url_for('courses') }}" class="btn btn-cc">
+              Batafsil <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-5">
+      <a href="{{ url_for('courses') }}" class="btn btn-outline-urtt btn-lg">
+        Barcha yo'nalishlarni ko'rish <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <section class="section" style="background: #112240;">
-        <h2 class="section-h">Statistika va Imkoniyatlar</h2>
-        <div class="grid">
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">500+</h1>
-                <p>Yillik bitiruvchilar</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">15+</h1>
-                <p>IT Laboratoriyalar</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <h1 style="color: var(--accent);">90%</h1>
-                <p>Ish bilan ta'minlanish</p>
-            </div>
+<!-- ═══════════════ WHY URTT ═══════════════════════════════════════════════ -->
+<section class="why-section py-6">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <span class="section-tag">Nima uchun URTT?</span>
+        <h2 class="section-title mt-2">Bizni Boshqalardan Ajratib Turadigan Narsalar</h2>
+        <p class="section-desc">
+          Biz faqat nazariy bilim bermaymiz. Har bir talabamiz real loyihalarda ishtirok etib, 
+          mehnat bozoriga tayyor holda chiqadi.
+        </p>
+        <a href="{{ url_for('about') }}" class="btn btn-urtt mt-3">
+          <i class="bi bi-building me-2"></i>Texnikum haqida
+        </a>
+      </div>
+      <div class="col-lg-7">
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon why-blue"><i class="bi bi-laptop-fill"></i></div>
+            <h5>Zamonaviy Laboratoriyalar</h5>
+            <p>500+ kompyuter, GPU klasterlar, Cisco uskunalari va multimedia studiyasi.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon why-green"><i class="bi bi-briefcase-fill"></i></div>
+            <h5>Ish Joyi Kafolati</h5>
+            <p>Mezunlarimizning 87%i texnikumni bitirguniga qadar ish topadi.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon why-purple"><i class="bi bi-people-fill"></i></div>
+            <h5>Sanoat Ekspertlari</h5>
+            <p>O'qituvchilarimiz faol IT sohasida ishlaydi va real tajribani ulashadi.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon why-orange"><i class="bi bi-globe2"></i></div>
+            <h5>Xalqaro Sertifikatlar</h5>
+            <p>Cisco, Microsoft, Google va boshqa xalqaro sertifikatlarga tayyorlanish.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon why-red"><i class="bi bi-cash-coin"></i></div>
+            <h5>Arzon Narxlar</h5>
+            <p>Grant asosida o'qish imkoniyati va to'lov bo'lib to'lash tizimlari mavjud.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon why-teal"><i class="bi bi-heart-pulse-fill"></i></div>
+            <h5>Talabalar Qo'llab-quvvatlash</h5>
+            <p>Psixolog, mentor va karyera maslahatchi xizmatlaridan bepul foydalaning.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>Urganch shahri, Tinchlik ko'chasi, 6-uy. Tel: +998 (93) 923-01-45</p>
-        <p style="margin-top: 10px; opacity: 0.5;">&copy; 2026 Barcha huquqlar himoyalangan.</p>
-    </footer>
-</body>
-</html>
+<!-- ═══════════════ TESTIMONIALS ══════════════════════════════════════════ -->
+<section class="testimonials-section py-6">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Mezunlar fikri</span>
+      <h2 class="section-title">Ular URTT'ni Tanladi — Va Muvaffaqiyatga Erishdi</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="tc-quote"><i class="bi bi-quote"></i></div>
+          <p class="tc-text">URTT'da Python va Django o'rganib, hozir Toshkentdagi IT kompaniyada Backend Developer sifatida ishlayman. O'qituvchilar amaliyotga yo'naltirilgan o'qitadi.</p>
+          <div class="tc-author">
+            <div class="tc-avatar">AX</div>
+            <div>
+              <strong>Aziz Xolmatov</strong>
+              <small>Backend Developer @ TechUz</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card featured-tc">
+          <div class="tc-quote"><i class="bi bi-quote"></i></div>
+          <p class="tc-text">Kiberxavfsizlik yo'nalishini tanlab to'g'ri qildim. Bug bounty dasturlarida ishtirok etib, xalqaro kompaniyalardan mukofotlar olaman. URTT shu imkoniyatni berdi!</p>
+          <div class="tc-author">
+            <div class="tc-avatar">NI</div>
+            <div>
+              <strong>Nilufar Ismoilova</strong>
+              <small>Security Researcher @ Freelance</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="tc-quote"><i class="bi bi-quote"></i></div>
+          <p class="tc-text">AI/ML yo'nalishida olingan bilimlarim asosida o'z startup loyihamni yaratdim. Hozir investorlar bilan muloqot qilyapman. URTT kelajagimni belgilab berdi.</p>
+          <div class="tc-author">
+            <div class="tc-avatar">JR</div>
+            <div>
+              <strong>Jasur Raximov</strong>
+              <small>AI Startup Founder</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ════════════════════════════════════════════════════ -->
+<section class="cta-section py-6">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-bg-decor"></div>
+      <div class="row align-items-center g-4 position-relative">
+        <div class="col-lg-8">
+          <span class="cta-tag">2024–2025 o'quv yili</span>
+          <h2 class="cta-title">Kelajagingizni Bugun Shakllantiring!</h2>
+          <p class="cta-desc">
+            Hujjat topshirish muddati: <strong>15 Avgust 2024 gacha</strong>. 
+            Joylar cheklangan — bugun ro'yxatdan o'ting.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="{{ url_for('admission') }}" class="btn btn-cta me-3">
+            <i class="bi bi-rocket-takeoff me-2"></i>Hujjat topshirish
+          </a>
+          <a href="{{ url_for('contact') }}" class="btn btn-cta-outline">
+            <i class="bi bi-telephone me-2"></i>Aloqa
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

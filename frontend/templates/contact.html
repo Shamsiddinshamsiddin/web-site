@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8"><title>Aloqa | URTT</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Aloqa | URTT</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-    <nav><a href="/" class="logo">URTT.</a> <a href="/" class="btn-outline">ORQAGA</a></nav>
-    <section class="section">
-        <h2 class="section-h">Biz bilan bog'laning</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Manzil:</h3>
-                <p>Xorazm viloyati, Urganch shahri, Tinchlik ko'chasi, 6-uy.</p>
-                <p>Mo'ljal: 1-sonli maktab, Xalq banki viloyat filiali.</p>
-            </div>
-            <div class="card">
-                <h3>Kontaktlar:</h3>
-                <p>Telefon: +998 (93) 923-01-45</p>
-                <p>Instagram: @urtt.xorazm</p>
-                <p>Email: info@urtt.uz</p>
-            </div>
-        </div>
-        <!-- Google Maps Iframe simulyatsiyasi -->
-        <div style="margin-top: 40px; height: 300px; background: #112240; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-            <p>XARITA BU YERDA KO'RINADI (Google Maps API)</p>
-        </div>
-    </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8"><title>Aloqa | URTT</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav><a href="/" class="logo">URTT.</a> <a href="/" class="btn-outline">ORQAGA</a></nav>
-    <section class="section">
-        <h2 class="section-h">Biz bilan bog'laning</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Manzil:</h3>
-                <p>Xorazm viloyati, Urganch shahri, Tinchlik ko'chasi, 6-uy.</p>
-                <p>Mo'ljal: 1-sonli maktab, Xalq banki viloyat filiali.</p>
-            </div>
-            <div class="card">
-                <h3>Kontaktlar:</h3>
-                <p>Telefon: +998 (93) 923-01-45</p>
-                <p>Instagram: @urtt.xorazm</p>
-                <p>Email: info@urtt.uz</p>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-lg-5 bg-primary p-5 text-white">
+                            <h2 class="fw-bold">Biz bilan bog'laning</h2>
+                            <p class="opacity-75 mb-5">Savollaringiz bo'lsa bizga yozing yoki qo'ng'iroq qiling.</p>
+                            <div class="mb-4"><h5>📍 Manzil:</h5><p>Urganch sh., Tinchlik ko'chasi, 6-uy</p></div>
+                            <div class="mb-4"><h5>📞 Telefon:</h5><p>+998 (93) 923-01-45</p></div>
+                            <div class="mb-4"><h5>📧 Email:</h5><p>info@urtt.uz</p></div>
+                        </div>
+                        <div class="col-lg-7 p-5 bg-white">
+                            {% with m = get_flashed_messages() %}{% if m %}<div class="alert alert-success">{{m[0]}}</div>{% endif %}{% endwith %}
+                            <form method="POST" id="contactForm">
+                                <div class="mb-3"><label class="form-label">To'liq ismingiz</label><input type="text" name="name" class="form-control" required></div>
+                                <div class="mb-3"><label class="form-label">Telefon raqamingiz</label><input type="tel" name="phone" class="form-control" required></div>
+                                <div class="mb-3"><label class="form-label">Xabaringiz</label><textarea name="message" class="form-control" rows="4"></textarea></div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">Yuborish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Google Maps Iframe simulyatsiyasi -->
-        <div style="margin-top: 40px; height: 300px; background: #112240; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-            <p>XARITA BU YERDA KO'RINADI (Google Maps API)</p>
-        </div>
-    </section>
+    </div>
 </body>
 </html>

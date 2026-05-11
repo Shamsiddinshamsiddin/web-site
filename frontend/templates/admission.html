@@ -2,83 +2,59 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Qabul 2026 | Urganch RTT</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qabul 2026 | URTT</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">URTT.</a>
-        <div class="nav-links">
-            <a href="/">Bosh sahifa</a>
-            <a href="/about">Texnikum</a>
-            <a href="/contact">Aloqa</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="/">URTT.</a>
+            <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">Bosh sahifa</a>
+                <a class="nav-link" href="/courses">Yo'nalishlar</a>
+                <a class="nav-link" href="/contact">Bog'lanish</a>
+            </ul></div>
         </div>
     </nav>
 
-    <section class="section">
-        <h2 class="section-h">Qabul — 2026: Kelajak sari qadam</h2>
-        <div class="card" style="max-width: 900px; margin: auto; text-align: left;">
-            <h3 style="color: var(--accent);">Ro'yxatdan o'tish tartibi:</h3>
-            <p>2026-2027 o'quv yili uchun qabul jarayonlari <strong>iyun oyidan</strong> boshlanadi. Hujjatlar onlayn tarzda <a href="https://texnikum.edu.uz" style="color: var(--accent);">texnikum.edu.uz</a> platformasi orqali qabul qilinadi.</p>
-            
-            <h3 style="margin-top: 20px;">Kerakli hujjatlar:</h3>
-            <ul>
-                <li>Pasport yoki ID-karta nusxasi</li>
-                <li>Umumiy o'rta ta'lim (11-sinf) attestati yoki diplom</li>
-                <li>3.5x4.5 o'lchamdagi rasm (elektron)</li>
-            </ul>
-
-            <h3 style="margin-top: 20px;">Imtiyozlar:</h3>
-            <p>IT-park rezidentlari tomonidan tavsiya etilgan yoshlar va xalqaro IT sertifikatiga (IELTS, Google, Cisco) ega bo'lgan abituriyentlar imtiyozli asosda qabul qilinadi.</p>
-            
-            <div style="margin-top: 30px; text-align: center;">
-                <a href="/contact" class="btn-outline">Savollaringiz bormi? Bog'lanish</a>
-            </div>
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Qabul jarayoni — 2026</h1>
+            <p class="lead">Kelajak mutaxassislari safi qo'shiling!</p>
         </div>
     </section>
 
-    <footer>&copy; 2026 Urganch RTT Qabul Komissiyasi</footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <title>Qabul 2026 | Urganch RTT</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/" class="logo">URTT.</a>
-        <div class="nav-links">
-            <a href="/">Bosh sahifa</a>
-            <a href="/about">Texnikum</a>
-            <a href="/contact">Aloqa</a>
-        </div>
-    </nav>
-
-    <section class="section">
-        <h2 class="section-h">Qabul — 2026: Kelajak sari qadam</h2>
-        <div class="card" style="max-width: 900px; margin: auto; text-align: left;">
-            <h3 style="color: var(--accent);">Ro'yxatdan o'tish tartibi:</h3>
-            <p>2026-2027 o'quv yili uchun qabul jarayonlari <strong>iyun oyidan</strong> boshlanadi. Hujjatlar onlayn tarzda <a href="https://texnikum.edu.uz" style="color: var(--accent);">texnikum.edu.uz</a> platformasi orqali qabul qilinadi.</p>
-            
-            <h3 style="margin-top: 20px;">Kerakli hujjatlar:</h3>
-            <ul>
-                <li>Pasport yoki ID-karta nusxasi</li>
-                <li>Umumiy o'rta ta'lim (11-sinf) attestati yoki diplom</li>
-                <li>3.5x4.5 o'lchamdagi rasm (elektron)</li>
-            </ul>
-
-            <h3 style="margin-top: 20px;">Imtiyozlar:</h3>
-            <p>IT-park rezidentlari tomonidan tavsiya etilgan yoshlar va xalqaro IT sertifikatiga (IELTS, Google, Cisco) ega bo'lgan abituriyentlar imtiyozli asosda qabul qilinadi.</p>
-            
-            <div style="margin-top: 30px; text-align: center;">
-                <a href="/contact" class="btn-outline">Savollaringiz bormi? Bog'lanish</a>
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
+                    <div class="display-4 text-primary mb-3"><i class="bi bi-1-circle"></i></div>
+                    <h4 class="fw-bold">Hujjat topshirish</h4>
+                    <p class="text-muted">Passport nusxasi, attestat va 3x4 rasm topshiriladi.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
+                    <div class="display-4 text-primary mb-3"><i class="bi bi-2-circle"></i></div>
+                    <h4 class="fw-bold">Suhbat yoki Test</h4>
+                    <p class="text-muted">Tanlagan yo'nalishingiz bo'yicha kirish imtihonlari.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
+                    <div class="display-4 text-primary mb-3"><i class="bi bi-3-circle"></i></div>
+                    <h4 class="fw-bold">Natijalar</h4>
+                    <p class="text-muted">Muvaffaqiyatli o'tganlar talabalikka qabul qilinadi.</p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <footer>&copy; 2026 Urganch RTT Qabul Komissiyasi</footer>
+        <div class="mt-5 p-5 bg-light rounded-5 text-center">
+            <h3>Hujjat topshirish muddati: <b>1-avgustgacha</b></h3>
+            <a href="/contact" class="btn btn-primary btn-lg mt-3 px-5">Online Ariza Topshirish</a>
+        </div>
+    </div>
 </body>
 </html>

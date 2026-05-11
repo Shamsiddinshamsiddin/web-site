@@ -1,41 +1,21 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8"><title>Kirish | Urganch RTT</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Kirish | Kabinet</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-    <nav><a href="/">Orqaga qaytish</a></nav>
-    <div class="container" style="max-width: 400px; margin-top: 80px;">
-        <div class="card" style="text-align: center;">
-            <h2>Tizimga kirish</h2>
-            {% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
-            <form method="POST">
-                <input type="text" name="uname" placeholder="Login (admin)" required>
-                <input type="password" name="pass" placeholder="Parol (admin123)" required>
-                <button type="submit" class="btn" style="width: 100%;">Kirish</button>
+<body class="d-flex align-items-center vh-100 bg-primary">
+    <div class="container" style="max-width: 400px;">
+        <div class="card p-4 shadow-lg border-0 rounded-4">
+            <div class="text-center mb-4"><h3 class="fw-bold">Tizimga kirish</h3><p class="text-muted">URTT Talabalar portali</p></div>
+            <form>
+                <div class="mb-3"><label class="form-label">ID / Login</label><input type="text" class="form-control py-2" placeholder="ID raqamingiz"></div>
+                <div class="mb-3"><label class="form-label">Parol</label><input type="password" class="form-control py-2" placeholder="********"></div>
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-3">KIRISH</button>
             </form>
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8"><title>Kirish | Urganch RTT</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <nav><a href="/">Orqaga qaytish</a></nav>
-    <div class="container" style="max-width: 400px; margin-top: 80px;">
-        <div class="card" style="text-align: center;">
-            <h2>Tizimga kirish</h2>
-            {% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
-            <form method="POST">
-                <input type="text" name="uname" placeholder="Login (admin)" required>
-                <input type="password" name="pass" placeholder="Parol (admin123)" required>
-                <button type="submit" class="btn" style="width: 100%;">Kirish</button>
-            </form>
+            <div class="mt-4 text-center"><a href="/" class="text-decoration-none small text-muted">&larr; Bosh sahifaga qaytish</a></div>
         </div>
     </div>
 </body>
