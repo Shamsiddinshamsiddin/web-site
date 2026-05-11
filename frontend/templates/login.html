@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -19,3 +20,26 @@
     </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8"><title>Kirish | Urganch RTT</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav><a href="/">Orqaga qaytish</a></nav>
+    <div class="container" style="max-width: 400px; margin-top: 80px;">
+        <div class="card" style="text-align: center;">
+            <h2>Tizimga kirish</h2>
+            {% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
+            <form method="POST">
+                <input type="text" name="uname" placeholder="Login (admin)" required>
+                <input type="password" name="pass" placeholder="Parol (admin123)" required>
+                <button type="submit" class="btn" style="width: 100%;">Kirish</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> 9cd36390c5e95cc67814ba7c70f26a97eba6a12f
