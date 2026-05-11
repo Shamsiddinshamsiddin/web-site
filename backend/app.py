@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 from flask import Flask, render_template, request, flash
 
@@ -48,7 +47,6 @@ def admission():
 if __name__ == '__main__':
     # Serverni barcha tarmoq interfeyslarida ishga tushiramiz
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-=======
 import os
 from flask import Flask, render_template, request, flash
 
@@ -98,4 +96,4 @@ def admission():
 if __name__ == '__main__':
     # Serverni barcha tarmoq interfeyslarida ishga tushiramiz
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
->>>>>>> 9cd36390c5e95cc67814ba7c70f26a97eba6a12f
+

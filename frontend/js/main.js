@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Urganch RTT sayti yuklandi!");
     const cards = document.querySelectorAll('.card');
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-=======
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Urganch RTT sayti yuklandi!");
     const cards = document.querySelectorAll('.card');
@@ -24,4 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
->>>>>>> 9cd36390c5e95cc67814ba7c70f26a97eba6a12f
